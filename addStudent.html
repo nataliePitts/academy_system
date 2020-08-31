@@ -1,0 +1,21 @@
+<!-- const add_id = "3030330";--><!-- const add_name = "Natalie";--><!-- const add_city = "Ramat-gan";--><!-- const add_toar = "BA";--><!-- const base_url ="/student"--><!DOCTYPE html><html> <head><title>Add new student</title><meta charset="utf-8"><style>div.div1{
+    background-color: 	#B0C4DE;
+    color:	#333333;
+    font-family: verdana;
+    font-size: 17px;
+    width:450px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    
+}
+h3{
+    color:#234343;
+}
+input[type=text]{
+    border: none;
+    border-bottom: 1px solid darkslategrey;
+}
+
+</style><script>CheckForm(){
+var flag = true;
+  }</script></head><body><div class="div1"><h3>Add a new student:</h3><form method="post" action="add" onsubmit="return CheckForm()" border="1"><label for="add_id">Student ID:<input type="text" id="add_id" name="add_id"></label><br><label for="add_name">Full name:</label><input type="text" id="add_name" name="add_name"><br><label for="add_city">City:<input type="text" id="add_city" name="add_city"></label><br><label for="add_toar">Choose a Toar:<select id="add_toar" name="add_toar" size="3"><option value="BA">BA</option><option value="MA">MA</option><option value="PHD">PHD</option></select></label><br><br><button type="submit">Add</button></form><a href="http://localhost:8080/student">Back to the main page</a></div></body></html>

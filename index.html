@@ -1,0 +1,19 @@
+<!DOCTYPE html><html dir="rtl" lang="he"> <head><title>Academic system</title><meta charset="utf-8"><style>div.div1{
+    background-color: 	#B0C4DE;
+    color:	#333333;
+    font-family: verdana;
+    font-size: 17px;
+    width:450px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    
+}
+h3{
+    color:#234343;
+}
+input[type=text]{
+    border: none;
+    border-bottom: 1px solid darkslategrey;
+}
+
+</style></head><body><div class="div1"></div><h3>מערכת אקדמית</h3><form method="post" action="/student"><label for="toar">בחר תואר:<select id="toar" name="toar"><option value="all">סוגי תארים</option><option value="BA">BA</option><option value="MA">MA</option><option value="PHD">PHD</option></select></label></form><br><label for="city">עיר:<input type="text" id="city" name="city"></label><br><label for="min_avg">ממוצע מינימלי: <input type="number" id="min_avg" name="min_avg" min="0" max="100"></label><br><input type="button" value=" סנן תוצאות"><hr><a href="/student/add">הוסף סטודנט/ית חדש</a><hr><table><tr> <th>שם הסטודנט </th><th>ת.ז</th><th> </th><th> <tr><td>Natalie</td><td>305204018</td><td> </td><form method="post" action="student/delete/305204018" onsubmit="return confirm('האם למחוק את הסטודנט?')"><button type="submit">Delete</button></form><form method="post" action="/update/305204018"><button type="submit">Update</button></form></tr><tr><td>Natalie</td><td>305204018</td><td> </td><form method="post" action="student/delete/305204018" onsubmit="return confirm('האם למחוק את הסטודנט?')"><button type="submit">Delete</button></form><form method="post" action="/update/305204018"><button type="submit">Update</button></form></tr></th></tr></table></body></html>
