@@ -1,0 +1,56 @@
+doctype html
+html(dir="rtl" lang="he") 
+    head
+        title עדכון נתונים
+        meta(charset='utf-8')
+        style
+          include ../public/style.css 
+        script.
+          CheckForm(){
+          var flag = true;
+         }   
+    body
+        div.div1
+            h1 מערכת עדכון נתונים:
+            form(method = "post" onsubmit="return CheckForm()" action='/student/update/'+ students.uid )
+            label(for="id") מספר ת.ז:
+                input(type="text" id="id" name="id" value=id)
+            br
+            br
+            label(for="name") שם מלא:
+                input(type="text" id="name" name="name" value=name)
+            br
+            br
+            label(for="city") עיר:
+                input(type="text" id="city" name="city" value=city)
+            br
+            br
+            label(for="toar") תואר:
+                input(id="toar" name="toar" size="3" value=toar)
+                
+            br
+            br
+            hr
+            h3 רשימת קורסים:
+            table  
+                tr
+                th מספר קורס
+                th ציון
+                        tr
+                         each course in students.courses
+                          th #{course.courseid}
+                          th #{course.grade}
+                        br
+                        hr
+                        label(for="courseid") מספר קורס:
+                            input(type="text" id="courseid" name="courseid" value=courseid required autofocus)
+                        br
+                        br
+                        label(for="grade") ציון:
+                        input(type="text" id="grade" name="grade" value=grade required)
+                        br
+                        button(type="submit") הוסף קורס
+                        br
+                        br
+                        p #{note}
+                        a(href="http://localhost:8080/student") Back to Main Page
